@@ -1,0 +1,6 @@
+C:\Users\Administrator\Desktop\LearnDemo\LearnDemo\bin\Debug\LearnDemo.exe.config
+C:\Users\Administrator\Desktop\LearnDemo\LearnDemo\bin\Debug\LearnDemo.exe
+C:\Users\Administrator\Desktop\LearnDemo\LearnDemo\bin\Debug\LearnDemo.pdb
+C:\Users\Administrator\Desktop\LearnDemo\LearnDemo\obj\Debug\LearnDemo.csprojResolveAssemblyReference.cache
+C:\Users\Administrator\Desktop\LearnDemo\LearnDemo\obj\Debug\LearnDemo.exe
+C:\Users\Administrator\Desktop\LearnDemo\LearnDemo\obj\Debug\LearnDemo.pdb

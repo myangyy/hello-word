@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Data>
+  <Products>
+    <product Name="West story" Price="9.9" SupplierID="1"></product>
+    <product Name="Assians" Price="19.9" SupplierID="2"></product>
+    <product Name="Frogs" Price="15" SupplierID="3"></product>
+  </Products>
+  <Suppliers>
+    <supplier Name="Sole" SupplierID="1" ></supplier>
+    <supplier Name="Sole mark" SupplierID="2" ></supplier>
+    <supplier Name="Sole supper" SupplierID="3" ></supplier>
+  </Suppliers>
+</Data>

@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LearnDemo", "LearnDemo\LearnDemo.csproj", "{E8D88DEC-0C9F-4E32-95E2-96323D4A8122}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DelegateDemo", "DelegateDemo\DelegateDemo.csproj", "{4A05FA4C-7CB7-4C41-866C-C24E77EDAAFE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "字符串集合类小练习", "ProductTest\字符串集合类小练习.csproj", "{4106D5B9-8A6D-451A-AAF7-A60B32F83DAD}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E8D88DEC-0C9F-4E32-95E2-96323D4A8122}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E8D88DEC-0C9F-4E32-95E2-96323D4A8122}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E8D88DEC-0C9F-4E32-95E2-96323D4A8122}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E8D88DEC-0C9F-4E32-95E2-96323D4A8122}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4A05FA4C-7CB7-4C41-866C-C24E77EDAAFE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4A05FA4C-7CB7-4C41-866C-C24E77EDAAFE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4A05FA4C-7CB7-4C41-866C-C24E77EDAAFE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4A05FA4C-7CB7-4C41-866C-C24E77EDAAFE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4106D5B9-8A6D-451A-AAF7-A60B32F83DAD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4106D5B9-8A6D-451A-AAF7-A60B32F83DAD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4106D5B9-8A6D-451A-AAF7-A60B32F83DAD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4106D5B9-8A6D-451A-AAF7-A60B32F83DAD}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

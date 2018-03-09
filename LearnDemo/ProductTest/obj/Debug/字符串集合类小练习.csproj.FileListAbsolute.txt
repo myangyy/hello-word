@@ -1,0 +1,6 @@
+C:\Users\Administrator\Desktop\LearnDemo\ProductTest\bin\Debug\ProductTest.exe.config
+C:\Users\Administrator\Desktop\LearnDemo\ProductTest\bin\Debug\ProductTest.exe
+C:\Users\Administrator\Desktop\LearnDemo\ProductTest\bin\Debug\ProductTest.pdb
+C:\Users\Administrator\Desktop\LearnDemo\ProductTest\obj\Debug\字符串集合类小练习.csprojResolveAssemblyReference.cache
+C:\Users\Administrator\Desktop\LearnDemo\ProductTest\obj\Debug\ProductTest.exe
+C:\Users\Administrator\Desktop\LearnDemo\ProductTest\obj\Debug\ProductTest.pdb

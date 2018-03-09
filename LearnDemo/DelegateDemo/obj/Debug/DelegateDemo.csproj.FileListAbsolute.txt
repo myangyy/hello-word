@@ -1,0 +1,5 @@
+C:\Users\Administrator\Desktop\LearnDemo\DelegateDemo\bin\Debug\DelegateDemo.exe.config
+C:\Users\Administrator\Desktop\LearnDemo\DelegateDemo\bin\Debug\DelegateDemo.exe
+C:\Users\Administrator\Desktop\LearnDemo\DelegateDemo\bin\Debug\DelegateDemo.pdb
+C:\Users\Administrator\Desktop\LearnDemo\DelegateDemo\obj\Debug\DelegateDemo.exe
+C:\Users\Administrator\Desktop\LearnDemo\DelegateDemo\obj\Debug\DelegateDemo.pdb
