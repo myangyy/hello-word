@@ -3,3 +3,6 @@ C:\Users\Administrator\Desktop\LearnDemo\DelegateDemo\bin\Debug\DelegateDemo.exe
 C:\Users\Administrator\Desktop\LearnDemo\DelegateDemo\bin\Debug\DelegateDemo.pdb
 C:\Users\Administrator\Desktop\LearnDemo\DelegateDemo\obj\Debug\DelegateDemo.exe
 C:\Users\Administrator\Desktop\LearnDemo\DelegateDemo\obj\Debug\DelegateDemo.pdb
+C:\MyRepository\1ke_test\LearnDemo\DelegateDemo\bin\Debug\DelegateDemo.exe.config
+C:\MyRepository\1ke_test\LearnDemo\DelegateDemo\obj\Debug\DelegateDemo.exe
+C:\MyRepository\1ke_test\LearnDemo\DelegateDemo\obj\Debug\DelegateDemo.pdb
