@@ -34,9 +34,24 @@
 		        data: JSON.stringify({ "account": _v.account }),
 		        success: function (result) {
 		            if (result) {
-		                alert("删除成功");
-		                $('#list').empty();
-		                loadData();
+		                switch (results) {
+		                    case 0:
+		                        break;
+		                    case 1:
+		                        alert("用户名或密码错误");
+		                        break;
+		                    case 2:
+		                        window.location.href = "";
+		                        break;
+		                    case 3:
+		                        window.location.href = "";
+		                        break;
+		                    case 4:
+		                        window.location.href = "";
+		                        break;
+		                    default:
+		                        break;
+		                }
 		            }
 		        },
 		        error: function (XMLHttpRequest, textStatus, errorThrown) {//请求失败处理函数

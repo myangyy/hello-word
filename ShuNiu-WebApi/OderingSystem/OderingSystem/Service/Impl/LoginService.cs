@@ -15,12 +15,39 @@ namespace OderingSystem.Service.Impl
             LoginMessage message = new LoginMessage(); 
             try
             {
-                List<AccountEntry> accounts = context.Accounts.ToList();
-                AccountEntry source = accounts.Where(a => a.Name.Equals(account.Name) && a.PassWord.Equals(account.PassWord)).FirstOrDefault();
-                if (source!=null)
+                AccountEntry byName = context.Accounts.Find(account.Name);
+                AccountEntry byPass = context.Accounts.Find(account.PassWord);
+                if (byName != null && byPass != null)
                 {
-                    message.Message = "查询到account";
-                    message.LoginResult = LoginResult.LoginSuccess;
+                    RoleEntry role = context.Roles.Find(byName.RoleId);
+                    if (!string.IsNullOrEmpty(role.Id))
+                    {
+                        if (role.Name.Equals("SuperAdmin"))
+                        {
+                            message.Message = "SuperAdmin登陆成功";
+                            message.LoginResult = LoginResult.SuperAdminLogin;
+                        }
+                        else if (role.Name.Equals("Admin"))
+                        {
+                            message.Message = "Admin登陆成功";
+                            message.LoginResult = LoginResult.AdminLogin;
+                        }
+                        else if (role.Name.Equals("User"))
+                        {
+                            message.Message = "User登陆成功";
+                            message.LoginResult = LoginResult.UserLogin;
+                        }
+                    }
+                    else
+                    {
+                        message.Message = "用户名或密码错误";
+                        message.LoginResult = LoginResult.LoginFailed;
+                    }
+                }
+                else
+                {
+                    message.Message = "用户名或密码错误";
+                    message.LoginResult = LoginResult.LoginFailed;
                 }
             }
             catch (Exception ex)

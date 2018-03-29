@@ -111,11 +111,11 @@ namespace OderingSystem.Controllers
 
         [HttpPost]
         [EnableQuery]
-        public bool QueryAccount(AccountEntry account)
+        public int QueryAccount(AccountEntry account)
         {
-            bool result = false;
+            int result = 0;
             ShuNiuContext context = SingleShuNiuContext.CreateInstance().Get();
-            LoginService.Lgoin(account, context);
+            result = (int)LoginService.Lgoin(account, context).LoginResult;
             return result;
         }
     }
