@@ -9,11 +9,16 @@ body {
     font-family: 'Source Sans Pro', sans-serif;
     color: white;
     font-weight: 300;
-    background-image: url('../image/oder.png');
-    /*background: url('../Image/订餐.png') no-repeat 0px 0px;*/
+    /*background-image: url('../image/oder.png');*/
+    background: url('../Image/oder.png') no-repeat 0px 0px;
+    overflow-x: hidden; 
+    overflow-y: hidden;
     /*background-repeat: no-repeat;*/
     background-size: cover;
 }
+
+
+
 body ::-webkit-input-placeholder {
   /* WebKit browsers 
   font-family: 'Source Sans Pro', sans-serif;
@@ -200,14 +205,14 @@ form button:hover {
           animation-duration: 40s;
 }
 .bg-bubbles li:nth-child(9) {
-  left: 25%;
-  width: 10px;
-  height: 10px;
+  left: 25%; /*距离浏览器左边的距离*/
+  width: 10px;/*每个小块的宽*/
+  height: 10px;/*每个小块的长*/
   -webkit-animation-delay: 2s;
           animation-delay: 2s;
   -webkit-animation-duration: 40s;
           animation-duration: 40s;
-  background-color: rgba(255, 255, 255, 0.3);
+  background-color: rgba(255, 255, 255, 0.3);/*每个小块的颜色*/
 }
 .bg-bubbles li:nth-child(10) {
   left: 90%;
@@ -222,7 +227,7 @@ form button:hover {
             transform: translateY(0);
   }
   100% {
-    -webkit-transform: translateY(-700px) rotate(600deg);
+    -webkit-transform: translateY(-700px)/*y轴位置，数值越大越往下*/ rotate(600deg)/*rotate：旋转角度*/;
             transform: translateY(-700px) rotate(600deg);
   }
 }
