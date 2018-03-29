@@ -114,16 +114,8 @@ namespace OderingSystem.Controllers
         public bool QueryAccount(AccountEntry account)
         {
             bool result = false;
-            try
-            {
-                ShuNiuContext context = SingleShuNiuContext.CreateInstance().Get();
-                LoginService.Lgoin(account, context);
-           
-            }
-            catch (Exception ex)
-            {
-
-            }
+            ShuNiuContext context = SingleShuNiuContext.CreateInstance().Get();
+            LoginService.Lgoin(account, context);
             return result;
         }
     }

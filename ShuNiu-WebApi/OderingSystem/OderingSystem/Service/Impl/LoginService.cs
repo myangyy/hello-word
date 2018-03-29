@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using OderingSystem.Context;
 using OderingSystem.Models;
+using OderingSystem.Common;
 
 namespace OderingSystem.Service.Impl
 {
@@ -24,7 +25,7 @@ namespace OderingSystem.Service.Impl
             }
             catch (Exception ex)
             {
-                 
+                Logger.Error(ex);
             }
             return message;
         }
