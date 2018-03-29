@@ -1,0 +1,197 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema xmlns="http://schemas.microsoft.com/ado/2009/11/edm" xmlns:cg="http://schemas.microsoft.com/ado/2006/04/codegeneration" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" Namespace="Model1" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" annotation:UseStrongSpatialTypes="false">
+  <EntityContainer Name="Model1Container" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Roles" EntityType="Model1.Role" />
+    <EntitySet Name="Accounts" EntityType="Model1.Account" />
+    <AssociationSet Name="RoleAccount" Association="Model1.RoleAccount">
+      <End Role="Role" EntitySet="Roles" />
+      <End Role="Account" EntitySet="Accounts" />
+    </AssociationSet>
+    <EntitySet Name="Bills" EntityType="Model1.Bill" />
+    <AssociationSet Name="AccountBill" Association="Model1.AccountBill">
+      <End Role="Account" EntitySet="Accounts" />
+      <End Role="Bill" EntitySet="Bills" />
+    </AssociationSet>
+    <EntitySet Name="Consumes" EntityType="Model1.Consume" />
+    <AssociationSet Name="AccountConsume" Association="Model1.AccountConsume">
+      <End Role="Account" EntitySet="Accounts" />
+      <End Role="Consume" EntitySet="Consumes" />
+    </AssociationSet>
+    <EntitySet Name="Charges" EntityType="Model1.Charge" />
+    <AssociationSet Name="AccountCharge" Association="Model1.AccountCharge">
+      <End Role="Account" EntitySet="Accounts" />
+      <End Role="Charge" EntitySet="Charges" />
+    </AssociationSet>
+    <EntitySet Name="DailyMenus" EntityType="Model1.DailyMenu" />
+    <EntitySet Name="MenuItems" EntityType="Model1.MenuItem" />
+    <AssociationSet Name="MenuItemDailyMenu" Association="Model1.MenuItemDailyMenu">
+      <End Role="MenuItem" EntitySet="MenuItems" />
+      <End Role="DailyMenu" EntitySet="DailyMenus" />
+    </AssociationSet>
+    <EntitySet Name="Organizations" EntityType="Model1.Organization" />
+    <AssociationSet Name="AccountOrganization" Association="Model1.AccountOrganization">
+      <End Role="Account" EntitySet="Accounts" />
+      <End Role="Organization" EntitySet="Organizations" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="Role">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" Nullable="false" />
+    <NavigationProperty Name="Accounts" Relationship="Model1.RoleAccount" FromRole="Role" ToRole="Account" />
+  </EntityType>
+  <EntityType Name="Account">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" Nullable="false" />
+    <Property Name="ChineseName" Type="String" Nullable="false" />
+    <Property Name="Password" Type="String" Nullable="false" />
+    <NavigationProperty Name="Role" Relationship="Model1.RoleAccount" FromRole="Account" ToRole="Role" />
+    <Property Name="RoleId" Type="Int64" Nullable="false" />
+    <NavigationProperty Name="Bills" Relationship="Model1.AccountBill" FromRole="Account" ToRole="Bill" />
+    <NavigationProperty Name="Consumes" Relationship="Model1.AccountConsume" FromRole="Account" ToRole="Consume" />
+    <NavigationProperty Name="Charges" Relationship="Model1.AccountCharge" FromRole="Account" ToRole="Charge" />
+    <NavigationProperty Name="Organizations" Relationship="Model1.AccountOrganization" FromRole="Account" ToRole="Organization" />
+  </EntityType>
+  <Association Name="RoleAccount">
+    <End Type="Model1.Role" Role="Role" Multiplicity="1" />
+    <End Type="Model1.Account" Role="Account" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Role">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Account">
+        <PropertyRef Name="RoleId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="Bill">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Remarks" Type="String" Nullable="false" />
+    <Property Name="OrderTime" Type="Time" Nullable="false" />
+    <Property Name="Amount" Type="Int64" Nullable="false" />
+    <Property Name="Menu" Type="String" Nullable="false" />
+    <NavigationProperty Name="Account" Relationship="Model1.AccountBill" FromRole="Bill" ToRole="Account" />
+    <Property Name="AccountId" Type="Int64" Nullable="false" />
+  </EntityType>
+  <Association Name="AccountBill">
+    <End Type="Model1.Account" Role="Account" Multiplicity="1" />
+    <End Type="Model1.Bill" Role="Bill" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Account">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Bill">
+        <PropertyRef Name="AccountId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="Consume">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <NavigationProperty Name="Account" Relationship="Model1.AccountConsume" FromRole="Consume" ToRole="Account" />
+    <Property Name="AccountId" Type="Int64" Nullable="false" />
+    <Property Name="Balance" Type="Int64" Nullable="false" />
+    <Property Name="ConsumeTime" Type="Time" Nullable="false" />
+    <Property Name="Money" Type="Int64" Nullable="false" />
+    <Property Name="Menu" Type="String" Nullable="false" />
+    <Property Name="Id" Type="String" Nullable="false" />
+  </EntityType>
+  <Association Name="AccountConsume">
+    <End Type="Model1.Account" Role="Account" Multiplicity="1" />
+    <End Type="Model1.Consume" Role="Consume" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Account">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Consume">
+        <PropertyRef Name="AccountId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="Charge">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <NavigationProperty Name="Account" Relationship="Model1.AccountCharge" FromRole="Charge" ToRole="Account" />
+    <Property Name="AccountId" Type="Int64" Nullable="false" />
+    <Property Name="Balance" Type="Int64" Nullable="false" />
+    <Property Name="ChargTime" Type="Time" Nullable="false" />
+    <Property Name="CharMoney" Type="Int64" Nullable="false" />
+  </EntityType>
+  <Association Name="AccountCharge">
+    <End Type="Model1.Account" Role="Account" Multiplicity="1" />
+    <End Type="Model1.Charge" Role="Charge" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Account">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Charge">
+        <PropertyRef Name="AccountId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="DailyMenu">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Week" Type="String" Nullable="false" />
+    <Property Name="AddTime" Type="String" Nullable="false" />
+    <NavigationProperty Name="MenuItem" Relationship="Model1.MenuItemDailyMenu" FromRole="DailyMenu" ToRole="MenuItem" />
+    <Property Name="MenuItemId" Type="Int64" Nullable="false" />
+  </EntityType>
+  <EntityType Name="MenuItem">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Dish" Type="String" Nullable="false" />
+    <Property Name="Type" Type="Int64" Nullable="false" />
+    <Property Name="CalculationType" Type="Int64" Nullable="false" />
+    <NavigationProperty Name="DailyMenus" Relationship="Model1.MenuItemDailyMenu" FromRole="MenuItem" ToRole="DailyMenu" />
+  </EntityType>
+  <Association Name="MenuItemDailyMenu">
+    <End Type="Model1.MenuItem" Role="MenuItem" Multiplicity="1" />
+    <End Type="Model1.DailyMenu" Role="DailyMenu" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="MenuItem">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="DailyMenu">
+        <PropertyRef Name="MenuItemId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="Organization">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <NavigationProperty Name="Account" Relationship="Model1.AccountOrganization" FromRole="Organization" ToRole="Account" />
+    <Property Name="AdminId" Type="Int64" Nullable="false" />
+    <Property Name="UserId" Type="String" Nullable="false" />
+    <Property Name="Floor" Type="Int64" Nullable="false" />
+  </EntityType>
+  <Association Name="AccountOrganization">
+    <End Type="Model1.Account" Role="Account" Multiplicity="1" />
+    <End Type="Model1.Organization" Role="Organization" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Account">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Organization">
+        <PropertyRef Name="AdminId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

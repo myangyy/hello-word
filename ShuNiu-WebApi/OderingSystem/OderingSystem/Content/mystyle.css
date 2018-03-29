@@ -1,0 +1,220 @@
+﻿.form-line {
+    margin-top: 10px;
+    clear: both;
+}
+
+
+.form-label {
+    width: 150px;
+}
+
+.form-label {
+    width: 220px;
+    float: left;
+    height: 24px;
+    line-height: 24px;
+    margin-left: 20px;
+    font-size: 13px;
+}
+
+.login-form {
+    width: 410px;
+    margin: 350px auto 0 auto;
+    text-align: center;
+    padding: 30px;
+    /*background: url(images/mask.png);*/
+    background-image: url('../Image/mask.png');
+    border-radius: 10px;
+}
+
+.login-form .name, .login-box .password, .login-box .code, .login-box .remember {
+    font-size: 16px;
+    text-shadow: 0 1px 2px rgba(0,0,0,.1);
+}
+
+.login-form label {
+    float: left;
+    /*display: inline-block;*/
+    width: 60px;
+    text-align: right;
+    vertical-align: middle;
+}
+
+.button {
+    cursor: pointer;
+    width: 100%;
+    height: 44px;
+    padding: 0;
+    background: #ef4300;
+    border: 1px solid #ff730e;
+    border-radius: 6px;
+    font-weight: 700;
+    color: #fff;
+    font-size: 24px;
+    letter-spacing: 15px;
+    text-shadow: 0 1px 2px rgba(0,0,0,.1);
+}
+
+
+.menuform-line{
+    margin-top: 10px;
+    clear: both;
+}
+
+.menuform-label{
+     width: 220px;
+    float: left;
+    height: 24px;
+    line-height: 24px;
+    margin-left: 20px;
+    font-size: 13px;
+}
+
+.form-textarea {
+    width: 298px;
+    padding-left: 8px;
+    height: 60px;
+    resize: none;
+    font-size: 13px;
+}
+
+.submit-region {
+    margin-top:20px;
+    height: 70px;
+    width: 780px;
+}
+
+    #dialog .submit-region input[type=button], #dialog .submit-region button {
+        float: right;
+        width: 80px;
+        height: 26px;
+        margin-right: 10px;
+    }
+
+.btn-next, .btn-finish {
+    background-color: #086099;
+    color: white;
+    border: 1px solid #086099;
+}
+
+.disbled-btn-finish {
+    background-color: #bfbfbf;
+    color: white;
+    border: 1px solid #bfbfbf;
+}
+
+ .btn-ancel, .btn-prev {
+    background-color: white;
+}
+
+.pic_text {
+    color: Red;
+}
+
+.pic_label {
+    color: Gray;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.pic_image {
+    margin: 5px;
+}
+
+
+
+.homelayout-tabs .home-button {
+    float: right;
+    top: 0;
+    height: 48px;
+    line-height: 48px;
+    position: absolute;
+    right: 0;
+    z-index: 10;
+    margin-right: 10px;
+}
+
+.homelayout-navagation {
+    height: 48px;
+    width: 100%;
+    background: #31313d;
+    color: white;
+    min-width: 984px;
+    font-size: 0.875em;
+}
+
+.homelayout-manage {
+    height: 60px;
+    border-bottom: 1px solid #e4e4e4;
+    background-color: #f6f6f6;
+    padding: 0 20px;
+    display: none;
+}
+
+.homelayout-tabs .home-button .user-root {
+    float: right;
+    border-left: 1px solid #4e4e61;
+    cursor: default;
+}
+
+.homelayout-tabs {
+    min-width: 1024px;
+    width: 100%;
+    /* position: relative; */
+    position: fixed;
+    top: 0;
+    z-index: 9999;
+}
+
+.homelayout-navagation {
+    height: 48px;
+    width: 100%;
+    background: #31313d;
+    color: white;
+    min-width: 984px;
+    font-size: 0.875em;
+}
+
+.font-color{
+    color: white;
+}
+
+.homelayout-tabs .home-button .user-root .home-user-area {
+    padding-left: 20px;
+    float: right;
+}
+
+.datagrid-mask-msg {
+
+  position: absolute;
+
+  top: 50%;
+
+  margin-top: -20px;
+
+  padding: 12px 5px 10px 30px;
+
+  width: auto;
+
+  height: 16px;
+
+  border-width: 2px;
+
+  border-style: solid;
+
+  display: none;
+
+}
+
+.logout {
+    width: 120px;
+    padding: 10px;
+    font-size: 1.2em;
+    height: 30px;
+    border-right: 1px solid #4e4e61;
+    text-align: center;
+}
+
+#NavigationRoot :hover {
+    background-color: #808080;
+} 
