@@ -15,8 +15,8 @@ namespace OderingSystem.Service.Impl
             LoginMessage message = new LoginMessage(); 
             try
             {
-                AccountEntry byName = context.Accounts.Find(account.Name);
-                AccountEntry byPass = context.Accounts.Find(account.PassWord);
+                AccountEntry byName = context.Accounts.Where(a => a.Name == account.Name).FirstOrDefault();
+                AccountEntry byPass = context.Accounts.Where(a => a.PassWord == account.PassWord).SingleOrDefault();
                 if (byName != null && byPass != null)
                 {
                     RoleEntry role = context.Roles.Find(byName.RoleId);

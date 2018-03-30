@@ -27,7 +27,7 @@
 		    }
 		    $.ajax({
 		        type: "post",
-		        url: "odata/LoginAccount/AccountService.QueryAccount",
+		        url: "/odata/LoginAccount/AccountService.Login/",
 		        //url: "odata/People",
 		        async: false,
 		        contentType: 'application/json',
